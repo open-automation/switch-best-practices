@@ -73,7 +73,7 @@ When declaring a dataset (XML Pickup, Ungroup, Submit Points, Check Points, etc.
 <img src="https://i.imgur.com/efuLShX.png">
 
 ### Private Data Key Namespacing
-When declaring Private Data (PD) keys, you should namespace the values with the program you're working on. For example, if a group of flows is being used to gather Switch statistics, a PD key for number of flows should not be _Flow Count_. A better key would be _SS Flow Count_. This ensures developers can understand where the PD originated from as well as ensuring key names do not overlap when sent to functional flows.
+When declaring Private Data (PD) keys, you should namespace the values with the program you're working on. For example, if a group of flows is being used to gather Switch statistics (SS), a PD key for number of flows should not be _Flow Count_. A better key would be _SS Flow Count_. This ensures developers can understand where the PD originated from as well as ensuring key names do not overlap when sent to functional flows.
 
 ## Design Patterns
 
