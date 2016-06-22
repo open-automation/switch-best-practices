@@ -79,6 +79,10 @@ When declaring Private Data (PD) keys, you should namespace the values with the 
 
 ### Private Data Abstraction
 
+Abstracting your primary dataset values with Private Data is helpful in many ways. It makes flows easier to troubleshoot and read since the syntax is much simpler: _[Job.PrivateData:Key="MIS Job Number"]_ vs _[Metadata.Text:Path="/field-list/field[2]/value",Dataset="Submit",Model="XML"]_.
+
+If your business logic requires you to alter a value, it is much easier to overwrite PD keys than it is to manipulate a dataset. For example, let's say you route preflight files into a Checkpoint by means of a PD value of a CSR's email address. In this checkpoint, the CSR checks the preflights before further processing the job. Perhaps you give your CSRs the ability to re-assign the preflight to another CSR. You can simply overwrite the CSR's email PD value with the re-assigned CSR's email and route it back into the same checkpoint.
+
 ### Problem Jobs Handler
 When using several sub-flows in concert, some logic, such as what to do with a Problem Job, should not be replicated within every flow. This can be handled by adding a flow, specifically tasked with handling problem jobs. The key is to write the FailMessage, FailElement, and FailFlow to private data before routing the job into the problem jobs handler.
 
