@@ -58,6 +58,13 @@ Instead, opt for a stepped logic approach where you use simpler logical determin
 <img src="https://i.imgur.com/Nm0a0Ym.png">
 
 ## Design Patterns
-## Problem jobs handler
-### Anti-patterns
-#### Routing out of problem jobs
+## Problem Jobs Handler
+When using several sub-flows in concert, some logic, such as what to do with a Problem Job, should not be replicated within every flow. This can be handled by adding a flow, specifically tasked with handling problem jobs. The key is to write the FailMessage, FailElement, and FailFlow to private data before routing the job into the problem jobs handler.
+
+<img src="https://i.imgur.com/EaucFti.png">
+
+## Anti-patterns
+### Routing Business Logic from Problem Jobs
+Relying on routing jobs out of Problem Jobs to return into business logic should be avoided wherever possible. This can be handled better by relying on flow element's outbound connectors to handle failures. Problem Jobs should be reserved for unhandled exceptions that actually need developer attention, as much as possible.
+
+<img src="https://i.imgur.com/rea0uY2.png">
