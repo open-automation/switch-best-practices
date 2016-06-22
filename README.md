@@ -58,10 +58,21 @@ Instead, opt for a stepped logic approach where you use simpler logical determin
 <img src="https://i.imgur.com/Nm0a0Ym.png">
 
 ## Design Patterns
-## Problem Jobs Handler
+### Problem Jobs Handler
 When using several sub-flows in concert, some logic, such as what to do with a Problem Job, should not be replicated within every flow. This can be handled by adding a flow, specifically tasked with handling problem jobs. The key is to write the FailMessage, FailElement, and FailFlow to private data before routing the job into the problem jobs handler.
 
 <img src="https://i.imgur.com/EaucFti.png">
+
+### Portal Callbacks
+By using Portals, you can simplify passing jobs between seperate flows. This can be done directly through hard-coded Portal Channels, but it is also advantagious to use Portal Callbacks which allows you to have a dynamic Channel. The benefit means, in the future, if you ever need to use a function flow (sub-flow invoked from a program) in another program flow, you do not have to modify the function flow to route to a new location.
+
+Do this by writing a Portal Channel value to Private Data. This will be the channel where your function flow will route the job (callback) once it's done doing the work.
+
+<img src="https://i.imgur.com/v8uTUsz.png">
+
+Then, within your function flow, Assert that your Portal Callback Channel (Private Data key) is set. Use that Private Data key within the outbound portal channel.
+
+<img src="https://i.imgur.com/dckKLqK.png">
 
 ## Anti-patterns
 ### Routing Business Logic from Problem Jobs
