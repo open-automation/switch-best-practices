@@ -34,7 +34,7 @@ Flow elements should be unique within the flow. A good strategy for doing this i
 <img src="https://i.imgur.com/9RwnCxj.png">
 
 #### Folder Naming
-Folders should not keep their default name (e.f. "Folder 37").
+Folders should not keep their default name (e.g. "Folder 37").
 
 ### Non-automanaged Folders
 Non-automanaged folders must not be the color yellow. Hot-folders to other devices or applications should be orange. Non-automanaged folders used to send jobs between flows should be blue.
