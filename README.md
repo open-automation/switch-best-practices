@@ -57,7 +57,20 @@ Instead, opt for a stepped logic approach where you use simpler logical determin
 
 <img src="https://i.imgur.com/Nm0a0Ym.png">
 
+## Metadata
+
+### Naming
+When declaring a dataset (XML Pickup, Ungroup, Submit Points, Check Points, etc...) the Dataset Name should be unique and descriptive. You must not leave the default dataset name ("Xml", "Ungroup", etc...).
+
+<img src="https://i.imgur.com/efuLShX.png">
+
+### Private Data Key Namespacing
+When declaring Private Data (PD) keys, you should namespace the values with the program you're working on. For example, if a group of flows is being used to gather Switch statistics, a PD key for number of flows should not be _Flow Count_. A better key would be _SS Flow Count_. This ensures developers can understand where the PD originated from as well as ensuring key names do not overlap when sent to functional flows.
+
 ## Design Patterns
+
+### Private Data Abstraction
+
 ### Problem Jobs Handler
 When using several sub-flows in concert, some logic, such as what to do with a Problem Job, should not be replicated within every flow. This can be handled by adding a flow, specifically tasked with handling problem jobs. The key is to write the FailMessage, FailElement, and FailFlow to private data before routing the job into the problem jobs handler.
 
