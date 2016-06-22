@@ -1,6 +1,14 @@
 # switch-style-guidelines
 Switch best practices that to improve readability and assist in troubleshooting.
 
+
+- [Flows](#flows)
+- [Flow Elements](#flow-elements)
+- [Connections](#connections)
+- [Metadata](#metadata)
+- [Design Patterns](#design-patterns)
+- [Anti-patterns](#anti-patterns)
+
 ## Flows
 
 ### Direction
