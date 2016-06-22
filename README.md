@@ -57,7 +57,7 @@ Stateful connectors (such as those from a traffic light type script or Inject co
 <img src="https://i.imgur.com/VVlx2G0.png">
 
 ### Stepped Logic
-Avoid cases where there are many complicated connectors being routed from a single flow element. If a job fails from the routing folder because it can't be accepted into any connector, it is difficult to troubleshoot.
+Avoid cases where there are many complicated connectors (star) being routed from a single flow element. If a job fails from the routing folder because it can't be accepted into any connector, it is difficult to troubleshoot.
 
 <img src="https://i.imgur.com/HIoaQjw.png">
 
