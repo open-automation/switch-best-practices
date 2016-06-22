@@ -79,7 +79,7 @@ When declaring Private Data (PD) keys, you should namespace the values with the 
 
 ### Private Data Abstraction
 
-Abstracting your primary dataset values with Private Data is helpful in many ways. It makes flows easier to troubleshoot and read since the syntax is much simpler: _[Job.PrivateData:Key="MIS Job Number"]_ vs _[Metadata.Text:Path="/field-list/field[2]/value",Dataset="Submit",Model="XML"]_.
+Abstracting your primary dataset values with Private Data is helpful in many ways. It makes flows easier to troubleshoot and read since the syntax is much simpler: _[Job.PrivateData:Key="MIS Job Number"]_ vs _[Metadata.Text:Path="/field-list/field[2]/value",Dataset="Submit",Model="XML"]_. Furthemore, if you every reconfigured the origin of that metadata path (changing the order of questions on a Checkpoint, for example) all of the Metadata.Text references throughout the flow would have to be changed instead of a single time if you had mapped it to a PD key.
 
 If your business logic requires you to alter a value, it is much easier to overwrite PD keys than it is to manipulate a dataset. For example, let's say you route preflight files into a Checkpoint by means of a PD value of a CSR's email address. In this checkpoint, the CSR checks the preflights before further processing the job. Perhaps you give your CSRs the ability to re-assign the preflight to another CSR. You can simply overwrite the CSR's email PD value with the re-assigned CSR's email and route it back into the same checkpoint.
 
