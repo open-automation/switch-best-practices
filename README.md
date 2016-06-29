@@ -29,7 +29,11 @@ Complex flows can be divided into many Flows, grouped in Flow Groups and linked 
 ## Flow Elements
 
 ### Naming
+#### Unique
 Flow elements should be unique within the flow. A good strategy for doing this is to make them stateful and more descriptive. If you have two "Rename" elements, elaborating on what they do differently will make the flow much more readible and help when debugging messages in the log.
+
+#### Scentence Capitalization
+Flow elements should be named with "scentence capitalization". This means, the first letter should be capatalized and following words should be all lowercase unless they are proper nouns or acronyms. For example: "VPP PitStop preflight result set" is better than "VPP PitStop Preflight Result Set".
 
 <img src="https://i.imgur.com/9RwnCxj.png">
 
