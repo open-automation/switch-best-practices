@@ -37,8 +37,11 @@ Flow elements should be named with "scentence capitalization". This means, the f
 
 <img src="https://i.imgur.com/9RwnCxj.png">
 
-#### Folders
+#### Inconsequential Folders
 Folders should not keep their default name (e.g. "Folder 37").
+
+#### Special Folders
+Folders that have special properties like setting job state should be colored green. If it is setting job state, it is recommended that "JS" be included in the start of the folder name.
 
 ### Non-automanaged Folders
 Non-automanaged folders must not be the color yellow. Hot-folders to other devices or applications should be orange. Non-automanaged folders used to send jobs between flows should be blue.
