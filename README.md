@@ -1,5 +1,5 @@
 # switch-style-guidelines
-Switch best practices that to improve readability and assist in troubleshooting.
+Switch best practices that improve readability and assist in troubleshooting.
 
 
 - [Flows](#flows)
