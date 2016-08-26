@@ -16,7 +16,7 @@ In general, it is preferred for flows to route jobs from left to right. Diversio
 <img src="http://i.imgur.com/uJtqsnj.png">
 
 #### Unutilizing vertical space
-Adhering to the directional guideline too closely may resulting in unutilized vertical screen space. A good solution for adhering to this rule is to use Portals to re-route jobs from the left within a flow. Another alternative is to step your connections with the "Horizontal, then verticial" property, which allows you to compact the redundant folders while still leaving it readible.
+Adhering to the directional guideline too closely may resulting in unutilized vertical screen space. A good solution for adhering to this rule is to use [switch-portals](https://github.com/open-automation/switch-portals) to re-route jobs from the left within a flow. Another alternative is to step your connections with the "Horizontal, then verticial" property, which allows you to compact the redundant folders while still leaving it readible.
 
 <img src="https://i.imgur.com/IkwY6xe.png" width="500">
 
@@ -26,7 +26,7 @@ Every flow should have its own “Problem jobs” folder located at the left-mos
 <img src="https://i.imgur.com/ldKkmwy.png">
 
 ### Dividing flow logic
-Complex flows can be divided into many Flows, grouped in Flow Groups and linked together. These flows can be linked via configured non-automanaged folders or something like Switch Portals. If this strategy is used, sub-flows should be clearly named and logically separated, with common logic reused as much as possible. Flow groups can be exported, imported, started and stopped with a single click.
+Complex flows can be divided into many flows, grouped in flow groups and linked together. These flows can be linked via configured non-automanaged folders or something like [switch-portals](https://github.com/open-automation/switch-portals). If this strategy is used, sub-flows should be clearly named and logically separated, with common logic reused as much as possible. Flow groups can be exported, imported, started and stopped with a single click.
 
 <img src="https://i.imgur.com/gJbiZyF.png">
 
@@ -60,7 +60,7 @@ Conditional connectors must be colored blue and must have a descriptive "name" p
 <img src="https://i.imgur.com/1gdeQA4.png">
 
 ### Traffic-light connectors
-All configurators that have traffic light connections should use the success and error output connections. Do not rely on an error going to Problem Jobs folder whenever possible.
+All configurators that have traffic light connections should use the success and error output connections. Do not rely on an error going to problem jobs folder whenever possible.
 
 ### Stateful connectors
 Stateful connectors (such as those from a traffic light type script or Inject configurator) should be colored to indicate its state. For example, an error connector should be colored magenta, while a success connector should be colored green.
@@ -100,7 +100,7 @@ When using several sub-flows in concert, some logic, such as what to do with a P
 <img src="https://i.imgur.com/EaucFti.png">
 
 ### Portal callbacks
-By using Portals, you can simplify passing jobs between seperate flows. This can be done directly through hard-coded Portal Channels, but it is also advantagious to use Portal Callbacks which allows you to have a dynamic Channel. The benefit means, in the future, if you ever need to use a function flow (sub-flow invoked from a program) in another program flow, you do not have to modify the function flow to route to a new location.
+By using [switch-portals](https://github.com/open-automation/switch-portals), you can simplify passing jobs between seperate flows. This can be done directly through hard-coded Portal Channels, but it is also advantagious to use Portal Callbacks which allows you to have a dynamic Channel. The benefit means, in the future, if you ever need to use a function flow (sub-flow invoked from a program) in another program flow, you do not have to modify the function flow to route to a new location.
 
 Do this by writing a Portal Channel value to Private Data. This will be the channel where your function flow will route the job (callback) once it's done doing the work.
 
