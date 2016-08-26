@@ -15,7 +15,7 @@ In general, it is preferred for flows to route jobs from left to right. Diversio
 
 <img src="http://i.imgur.com/uJtqsnj.png">
 
-#### Unutilizing vertical space
+#### Utilizing vertical space
 Adhering to the directional guideline too closely may resulting in unutilized vertical screen space. A good solution for adhering to this rule is to use [switch-portals](https://github.com/open-automation/switch-portals) to re-route jobs from the left within a flow. Another alternative is to step your connections with the "Horizontal, then verticial" property, which allows you to compact the redundant folders while still leaving it readible.
 
 <img src="https://i.imgur.com/IkwY6xe.png" width="500">
