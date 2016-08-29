@@ -86,6 +86,20 @@ When declaring a dataset (XML Pickup, Ungroup, Submit Points, Check Points, etc.
 ### Private data key namespacing
 When declaring Private Data (PD) keys, you should namespace the values with the program you're working on. For example, if a group of flows is being used to gather Switch statistics (SS), a PD key for number of flows should not be _Flow Count_. A better key would be _SS Flow Count_. This ensures developers can understand where the PD originated from as well as ensuring key names do not overlap when sent to functional flows.
 
+### XPath predicates
+When possible, avoid using indexed XPath predicates (/field-list/field[1]) to reference metadata values. It's very easy to do this since the Switch GUI uses this type of path when clicking on nodes.  In the below example, we select the value where the field index is 2.
+
+```
+[Metadata.Text:Path="/field-list/field[2]/value",Dataset="Insight Quote Checkpoint",Model="XML"]
+```
+
+A better solution is to use XPath predicates to access the value. In the below example, we select the value where the corresponding field tag is equal to "Client Email 1". This makes the variable statement much more readible and you won't break your path if you add or remove a node from your dataset (as adding or removing a question from your checkpoint would).
+
+```
+[Metadata.Text:Path="/field-list/field[tag='Client Email 1']/value",Dataset="EstimateHeader",Model="XML"]
+```
+
+
 ## Design patterns
 
 ### Private data abstraction
