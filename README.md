@@ -1,4 +1,4 @@
-# switch-style-guidelines
+# switch-best-practices
 Switch best practices that improve readability and assist in troubleshooting.
 
 - [Flows](#flows)
