@@ -96,7 +96,7 @@ When possible, avoid using indexed XPath predicates (/field-list/field[1]) to re
 A better solution is to use XPath predicates to access the value. In the below example, we select the value where the corresponding field tag is equal to "Client Email 1". This makes the variable statement much more readible and you won't break your path if you add or remove a node from your dataset (as adding or removing a question from your checkpoint would).
 
 ```
-[Metadata.Text:Path="/field-list/field[tag='Client Email 1']/value",Dataset="EstimateHeader",Model="XML"]
+[Metadata.Text:Path="/field-list/field[tag='Client Email 1']/value",Dataset="Insight Quote Checkpoint",Model="XML"]
 ```
 
 
