@@ -1,5 +1,5 @@
 # switch-best-practices
-Switch best practices that improve readability and assist in troubleshooting. Freddy tutorial.
+Switch best practices that improve readability and assist in troubleshooting.
 
 - [Flows](#flows)
 - [Flow elements](#flow-elements)
