@@ -39,10 +39,10 @@ Flow elements should be unique within the flow. A good strategy for doing this i
 #### Inconsequential folders
 Folders should not keep their default name (e.g. "Folder 37").
 
+<img src="https://i.imgur.com/9RwnCxj.png">
+
 #### Sentence capitalization
 Flow elements should be named with "Sentence capitalization". This means, the first letter should be capitalized and following words should be all lowercase unless they are proper nouns or acronyms. For example: "VPP PitStop preflight result set" is better than "VPP PitStop Preflight Result Set".
-
-<img src="https://i.imgur.com/9RwnCxj.png">
 
 #### Special folders
 Folders that have special properties like setting job state should be colored green. If it is setting job state, it is recommended that "JS" be included in the start of the folder name.
