@@ -36,13 +36,13 @@ Complex flows can be divided into many flows, grouped in flow groups and linked 
 #### Uniqueness
 Flow elements should be unique within the flow. A good strategy for doing this is to make them stateful and more descriptive. If you have two "Rename" elements, elaborating on what they do differently will make the flow much more readible and help when debugging messages in the log.
 
-#### Scentence capitalization
-Flow elements should be named with "scentence capitalization". This means, the first letter should be capatalized and following words should be all lowercase unless they are proper nouns or acronyms. For example: "VPP PitStop preflight result set" is better than "VPP PitStop Preflight Result Set".
+#### Inconsequential folders
+Folders should not keep their default name (e.g. "Folder 37").
 
 <img src="https://i.imgur.com/9RwnCxj.png">
 
-#### Inconsequential folders
-Folders should not keep their default name (e.g. "Folder 37").
+#### Sentence capitalization
+Flow elements should be named with "Sentence capitalization". This means, the first letter should be capitalized and following words should be all lowercase unless they are proper nouns or acronyms. For example: "VPP PitStop preflight result set" is better than "VPP PitStop Preflight Result Set".
 
 #### Special folders
 Folders that have special properties like setting job state should be colored green. If it is setting job state, it is recommended that "JS" be included in the start of the folder name.
